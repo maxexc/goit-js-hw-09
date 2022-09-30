@@ -16,3 +16,30 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  display: inline-flex;
+  margin-left: 5%;
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 22;
+  font-weight: 500;
+  background-color: rgb(99, 233, 177);
+  border-radius: 4px;
+  border: 0.5px solid rgba(0, 0, 0, 0.349);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+button:hover,
+button:focus {
+  position: relative;
+  background-color: rgb(87, 204, 204);
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
