@@ -1,11 +1,11 @@
 const refs = {
   startBtn: document.querySelector('button[data-start]'),
   stopBtn: document.querySelector('button[data-stop]'),
-  p: document.querySelector('p'),
+  span: document.querySelector('span'),
 };
 console.log(refs.startBtn);
 console.log(refs.stopBtn);
-console.log(refs.p);
+console.log(refs.span);
 
 refs.startBtn.addEventListener('click', startChangeColorBody);
 refs.stopBtn.addEventListener('click', stopChangeColorBody);
@@ -21,7 +21,7 @@ function startChangeColorBody() {
   }, 1000);
   refs.startBtn.setAttribute('disabled', false);
   refs.stopBtn.removeAttribute('disabled');
-  refs.p.innerHTML = '<p><a href="../index.html">Go back</a></p>';
+  refs.span.innerHTML = '';
 }
 
 function stopChangeColorBody() {
@@ -29,8 +29,8 @@ function stopChangeColorBody() {
   console.log(
     `notice: color change stopped, push start to continue, have a good day) `
   );
-  refs.p.innerHTML =
-    '<p><a href="../index.html">Go back</a> <b>notice</b>: color change stopped, push start to continue, have a good day)</p>';
+  refs.span.innerHTML =
+    '   <b>notice</b>: color change stopped, push start to continue, have a good day)';
   refs.stopBtn.setAttribute('disabled', true);
   refs.startBtn.removeAttribute('disabled');
 }
