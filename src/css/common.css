@@ -17,10 +17,15 @@ img {
   max-width: 100%;
 }
 
+.controlBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+
 button {
-  display: inline-flex;
-  margin-left: 5%;
-  margin-top: 5px;
+  margin-left: 20px;
   padding: 8px;
   font-size: 22;
   font-weight: 500;
@@ -58,7 +63,7 @@ a:hover {
 }
 
 .timer,
-.wrap {
+.menu {
   display: flex;
   justify-content: center;
   padding-top: 20px;
@@ -67,7 +72,7 @@ a:hover {
 .field {
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
+  padding: 0 15px;
 }
 
 input {
@@ -82,4 +87,8 @@ input {
   text-align: center;
   font-size: 30px;
   font-weight: 500;
+}
+
+.label {
+  font-size: 23px;
 }
