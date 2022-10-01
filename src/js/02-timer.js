@@ -11,7 +11,7 @@ const refs = {
   seconds: document.querySelector('span[data-seconds]'),
 };
 
-console.log('fhgjg');
+console.log('rerer');
 
 let intervalId = null;
 
