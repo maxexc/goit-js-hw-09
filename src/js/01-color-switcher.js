@@ -27,10 +27,10 @@ function startChangeColorBody() {
 function stopChangeColorBody() {
   clearInterval(timerId);
   console.log(
-    `notice: color change stopped, push start to continue, have a good day) `
+    `notice: color change is stopped, push start to continue, have a good day) `
   );
   refs.span.innerHTML =
-    '   <b>notice</b>: color change stopped, push start to continue, have a good day)';
+    '   <b>notice</b>: color change is stopped, push start to continue, have a good day)';
   refs.stopBtn.setAttribute('disabled', true);
   refs.startBtn.removeAttribute('disabled');
 }
