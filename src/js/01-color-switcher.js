@@ -1,3 +1,6 @@
+// import Notiflix from 'notiflix';
+console.log('change body color');
+
 const refs = {
   startBtn: document.querySelector('button[data-start]'),
   stopBtn: document.querySelector('button[data-stop]'),
@@ -29,6 +32,8 @@ function stopChangeColorBody() {
   console.log(
     `notice: color change is stopped, push start to continue, have a good day) `
   );
+  // Notiflix.Notify.success(`color change is stopped`);
+  // window.alert('Test message');
   refs.span.innerHTML =
     '   <b>notice</b>: color change is stopped, push start to continue, have a good day)';
   refs.stopBtn.setAttribute('disabled', true);
