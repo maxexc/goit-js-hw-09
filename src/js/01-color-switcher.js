@@ -19,7 +19,7 @@ function startChangeColorBody() {
     console.log(color);
     document.body.style.backgroundColor = color;
   }, 1000);
-  refs.startBtn.setAttribute('disabled', false);
+  refs.startBtn.setAttribute('disabled', true);
   refs.stopBtn.removeAttribute('disabled');
   refs.span.innerHTML = '';
 }

@@ -14,7 +14,7 @@ function createPromise(position, delay) {
 }
 
 const formRef = document.querySelector('.form');
-console.log(formRef);
+console.log(formRef.elements);
 
 formRef.addEventListener('submit', el => {
   el.preventDefault();
