@@ -92,3 +92,9 @@ input {
 .label {
   font-size: 23px;
 }
+
+label > input {
+  width: 150;
+  height: 44px;
+  margin: 5px 0;
+}

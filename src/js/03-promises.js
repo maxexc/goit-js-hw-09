@@ -1,10 +1,45 @@
+import Notiflix from 'notiflix';
+
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
-  if (shouldResolve) {
-    // Fulfill
-  } else {
-    // Reject
-  }
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldResolve) {
+        resolve({ position, delay });
+      } else {
+        reject({ position, delay });
+      }
+    }, delay);
+  });
 }
 
-console.log('wwww');
+const formRef = document.querySelector('.form');
+console.log(formRef);
+
+formRef.addEventListener('submit', el => {
+  el.preventDefault();
+
+  const delayValue = parseInt(formRef.elements.delay.value);
+  const stepValue = parseInt(formRef.elements.step.value);
+  const amountValue = parseInt(formRef.elements.amount.value);
+
+  createPromises(delayValue, stepValue, amountValue);
+});
+
+function createPromises(delay, step, amount) {
+  for (let i = 0; i < amount; i++) {
+    console.log(`Create promise #${i + 1} with delay ${delay + step * i}`);
+    createPromise(i + 1, delay + step * i)
+      .then(({ position, delay }) => {
+        Notiflix.Notify.success(
+          `✅ Fulfilled promise ${position} in ${delay}ms`
+        );
+      })
+      .catch(({ position, delay }) => {
+        Notiflix.Notify.failure(
+          `❌ Rejected promise ${position} in ${delay}ms`
+        );
+      });
+    // formRef.reset();
+  }
+}
