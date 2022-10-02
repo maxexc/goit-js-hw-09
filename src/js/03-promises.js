@@ -40,6 +40,6 @@ function createPromises(delay, step, amount) {
           `❌ Rejected promise ${position} in ${delay}ms`
         );
       });
-    // formRef.reset();
+    formRef.reset();
   }
 }
