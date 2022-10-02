@@ -1,7 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import 'notiflix/dist/notiflix-3.2.5.min.css';
+// import 'notiflix/dist/notiflix-3.2.5.min.css';
 
 const refs = {
   input: document.querySelector('#datetime-picker'),
@@ -35,7 +35,7 @@ const options = {
 
     refs.startBtn.onclick = function () {
       clearInterval(intervalId);
-      timer(time);
+      onTimer(time);
       refs.startBtn.setAttribute('disabled', true);
     };
   },
@@ -43,7 +43,7 @@ const options = {
 
 flatpickr(refs.input, options);
 
-function timer(time) {
+function onTimer(time) {
   refs.startBtn.setAttribute('disabled', true);
   // refs.input.setAttribute('disabled', true);
   console.log('start timer:', time);
@@ -55,7 +55,7 @@ function timer(time) {
     if (time < 1000) {
       clearInterval(intervalId);
       Notify.success('Time is up!');
-      refs.input.removeAttribute('disabled');
+      // refs.input.removeAttribute('disabled');
       return;
     }
   }, 1000);
